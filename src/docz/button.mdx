@@ -1,0 +1,48 @@
+---
+name: Button
+---
+
+import { Playground, Props } from "docz";
+import Button from "../components/Button";
+
+# Button
+
+<Props of={Button} />
+
+## 使用说明
+
+按钮用于开始一个即时操作。
+
+### 基本使用
+
+<Playground>
+  <Button style={{ margin: "0 15px 15px 0" }} />
+  <Button type="primary" style={{ margin: "0 15px 15px 0" }} />
+  <Button type="danger" style={{ margin: "0 15px 15px 0" }} />
+</Playground>
+
+### 调整大小
+
+<Playground>
+  <Button size="small" type="primary" style={{ margin: "0 15px 15px 0" }} />
+  <Button style={{ margin: "0 15px 15px 0" }} />
+  <Button size="large" type="danger" style={{ margin: "0 15px 15px 0" }} />
+</Playground>
+
+### loading
+
+<Playground>
+  <Button style={{ margin: "0 15px 15px 0" }} loading />
+</Playground>
+
+## API
+
+| 属性      | 说明                               | 类型          | default  |
+| --------- | ---------------------------------- | ------------- | -------- |
+| style     | 自定义样式                         | CSSProperties | -        |
+| className | class                              | string        | -        |
+| type      | 图标类型                           | number        | -        |
+| loading   | 是否带有 loading 动画              | boolean       | false    |
+| size      | 按钮大小,可选值为("small" "large") | string        | -        |
+| onClick   | 点击事件                           | (event)=>void | -        |
+| htmlType  | 设置 button 原生的 type 值         | stirng        | "button" |

@@ -1,0 +1,299 @@
+{
+  "config": {
+    "title": "Top Components",
+    "description": "topCoding 个人组件库",
+    "menu": [],
+    "version": "1.0.0",
+    "repository": null,
+    "native": false,
+    "codeSandbox": false,
+    "themeConfig": {},
+    "separator": "-",
+    "typescript": true,
+    "plugins": [
+      {}
+    ]
+  },
+  "props": [
+    {
+      "key": "src\\components\\Button\\button.tsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "button",
+          "methods": [],
+          "props": {
+            "style": {
+              "defaultValue": null,
+              "description": "",
+              "name": "style",
+              "parent": {
+                "fileName": "src/components/Button/button.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "CSSProperties | undefined"
+              }
+            },
+            "className": {
+              "defaultValue": null,
+              "description": "",
+              "name": "className",
+              "parent": {
+                "fileName": "src/components/Button/button.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "string | undefined"
+              }
+            },
+            "type": {
+              "defaultValue": null,
+              "description": "",
+              "name": "type",
+              "parent": {
+                "fileName": "src/components/Button/button.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "\"primary\" | \"danger\" | undefined"
+              }
+            },
+            "loading": {
+              "defaultValue": {
+                "value": "false"
+              },
+              "description": "",
+              "name": "loading",
+              "parent": {
+                "fileName": "src/components/Button/button.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "boolean | undefined"
+              }
+            },
+            "size": {
+              "defaultValue": null,
+              "description": "",
+              "name": "size",
+              "parent": {
+                "fileName": "src/components/Button/button.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "\"small\" | \"large\" | undefined"
+              }
+            },
+            "onClick": {
+              "defaultValue": null,
+              "description": "",
+              "name": "onClick",
+              "parent": {
+                "fileName": "src/components/Button/button.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "((event: MouseEvent<Element, MouseEvent>) => void) | undefined"
+              }
+            },
+            "htmlType": {
+              "defaultValue": {
+                "value": "button"
+              },
+              "description": "",
+              "name": "htmlType",
+              "parent": {
+                "fileName": "src/components/Button/button.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "\"button\" | \"submit\" | \"reset\" | undefined"
+              }
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "key": "src/docz/button.mdx",
+      "value": {
+        "name": "Button",
+        "id": "b42e4636d3cbdd8a0967f079e5139bad",
+        "filepath": "src/docz/button.mdx",
+        "link": "",
+        "slug": "src-docz-button",
+        "route": "/src-docz-button",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button",
+            "depth": 1,
+            "value": "Button"
+          },
+          {
+            "slug": "使用说明",
+            "depth": 2,
+            "value": "使用说明"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 3,
+            "value": "基本使用"
+          },
+          {
+            "slug": "调整大小",
+            "depth": 3,
+            "value": "调整大小"
+          },
+          {
+            "slug": "loading",
+            "depth": 3,
+            "value": "loading"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docz/icon.mdx",
+      "value": {
+        "name": "Icon",
+        "id": "c25f73802749d3aa537bb4248722fe9d",
+        "filepath": "src/docz/icon.mdx",
+        "link": "",
+        "slug": "src-docz-icon",
+        "route": "/src-docz-icon",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "icon",
+            "depth": 1,
+            "value": "Icon"
+          },
+          {
+            "slug": "使用说明",
+            "depth": 2,
+            "value": "使用说明"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docz/input.mdx",
+      "value": {
+        "name": "Input",
+        "id": "e3ff0c2151afb65c25287960192bcb42",
+        "filepath": "src/docz/input.mdx",
+        "link": "",
+        "slug": "src-docz-input",
+        "route": "/src-docz-input",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "input",
+            "depth": 1,
+            "value": "Input"
+          },
+          {
+            "slug": "基本用法",
+            "depth": 2,
+            "value": "基本用法"
+          },
+          {
+            "slug": "调整大小",
+            "depth": 2,
+            "value": "调整大小"
+          },
+          {
+            "slug": "搜索框",
+            "depth": 2,
+            "value": "搜索框"
+          },
+          {
+            "slug": "密码框",
+            "depth": 2,
+            "value": "密码框"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          },
+          {
+            "slug": "input-1",
+            "depth": 3,
+            "value": "Input"
+          },
+          {
+            "slug": "inputsearch",
+            "depth": 3,
+            "value": "Input.Search"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docz/switch.mdx",
+      "value": {
+        "name": "Switch",
+        "id": "ad7eb08aeba203f4e4c54a5b41a5c145",
+        "filepath": "src/docz/switch.mdx",
+        "link": "",
+        "slug": "src-docz-switch",
+        "route": "/src-docz-switch",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "switch",
+            "depth": 1,
+            "value": "Switch"
+          },
+          {
+            "slug": "使用说明",
+            "depth": 2,
+            "value": "使用说明"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 3,
+            "value": "基本使用"
+          },
+          {
+            "slug": "受控模式",
+            "depth": 3,
+            "value": "受控模式"
+          },
+          {
+            "slug": "组件大小",
+            "depth": 3,
+            "value": "组件大小"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          }
+        ]
+      }
+    }
+  ]
+}

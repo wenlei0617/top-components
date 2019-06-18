@@ -1,0 +1,47 @@
+---
+name: Switch
+---
+
+import { Playground, Props } from "docz";
+import Switch from "../components/Switch";
+import Icon from "../components/Icon";
+
+# Switch
+
+开关选择器。
+
+## 使用说明
+
+### 基本使用
+
+<Playground>
+  <Switch defaultChecked={false} />
+  <Switch defaultChecked={true} />
+</Playground>
+
+### 受控模式
+
+<Playground>
+  <Switch checked={false} />
+  <Switch checked={true} />
+</Playground>
+
+### 组件大小
+
+<Playground>
+  <Switch size="small" />
+  <Switch />
+</Playground>
+
+## API
+
+| 属性              | 说明         | 类型                                                | default   |
+| ----------------- | ------------ | --------------------------------------------------- | --------- |
+| defaultChecked    | 是否默认选中 | boolean                                             | false     |
+| checked           | 是否选中     | boolean                                             | false     |
+| onClick           | 点击事件     | (checked: boolean, event: React.MouseEvent) => void | -         |
+| onChange          | 切换事件     | (checked: boolean, event: React.MouseEvent) => void | -         |
+| size              | 大小         | "default" / "small"                                 | "default" |
+| style             | 样式         | React.CSSProperties                                 | -         |
+| checkedChildren   | 选中得内容   | React.ReactNode                                     | -         |
+| unCheckedChildren | 未选中得内容 | React.ReactNode                                     | -         |

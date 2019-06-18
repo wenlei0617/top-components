@@ -1,0 +1,63 @@
+---
+name: Input
+---
+
+import { Playground, Props } from "docz";
+import Input from "../components/Input";
+
+# Input
+
+通过鼠标或键盘输入内容，是最基础的表单域的包装。
+
+## 基本用法
+
+<Playground>
+
+<Input />
+
+</Playground>
+
+## 调整大小
+
+<Playground>
+
+<Input size="small" style={{margin:"0 15px 15px 0"}}  placeholder="small" />
+<Input size="default" style={{margin:"0 15px 15px 0"}}   placeholder="defalut" />
+<Input size="large"  placeholder="large" />
+</Playground>
+
+## 搜索框
+
+<Playground>
+  <Input.Search />
+  <Input.Search enterButton />
+  <Input.Search enterButton="搜索" />
+</Playground>
+
+## 密码框
+
+<Playground>
+  <Input.Password />
+</Playground>
+
+## API
+
+### Input
+
+| 属性         | 说明                                                               | 类型      | default |
+| ------------ | ------------------------------------------------------------------ | --------- | ------- |
+| placeholder  | 输入框提示文本                                                     | string    | -       |
+| defaultValue | 默认值(如果设置了 defaultValue,请不要再设置 value)                 | string    | -       |
+| disabled     | 是否禁用                                                           | boolean   | false   |
+| value        | 输入框内容(如果设置了 value,请设置 onChange 方法或者设置 readOnly) | string    | -       |
+| onChange     | 输入框内容改变得回调函数                                           | (e)=>void | -       |
+| readOnly     | 是否只读                                                           | boolean   | false   |
+
+### Input.Search
+
+| 属性        | 说明                           | 类型           | default |
+| ----------- | ------------------------------ | -------------- | ------- |
+| enterButton | 是否有确认按钮，可设为按钮文字 | string/boolean | -       |
+| style       | 改变搜索框样式                 | CSSProperties  | -       |
+| onSearch    | 点击搜索或按下回车键时的回调   | boolean        | false   |
+| className   | 自定义 class                   | string         | -       |
