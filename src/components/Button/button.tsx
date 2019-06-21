@@ -1,8 +1,9 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import "./styles/button.scss";
 import classnames from "classnames";
+import PropTypes from "prop-types";
+import * as React from "react";
 import Icon from "../Icon";
+import "./styles/button.scss";
+
 interface Iprops {
   children?: React.ReactNode;
   style?: React.CSSProperties;
@@ -14,7 +15,7 @@ interface Iprops {
   htmlType?: "button" | "submit" | "reset";
 }
 const Button = (props: Iprops) => {
-  let { children, htmlType, style, className, type, onClick, loading, size, ...rest } = props;
+  const { children, htmlType, style, className, type, onClick, loading, size, ...rest } = props;
   const classes = classnames({
     ["top-button"]: true,
     [`${className}`]: !!className,

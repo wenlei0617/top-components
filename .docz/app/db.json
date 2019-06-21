@@ -125,6 +125,30 @@
   ],
   "entries": [
     {
+      "key": "src/docz/animation.mdx",
+      "value": {
+        "name": "Animation",
+        "id": "ddc1be465cd5a7825681777b6878a636",
+        "filepath": "src/docz/animation.mdx",
+        "link": "",
+        "slug": "src-docz-animation",
+        "route": "/src-docz-animation",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "进度条",
+            "depth": 3,
+            "value": "进度条"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/docz/button.mdx",
       "value": {
         "name": "Button",
@@ -198,6 +222,79 @@
       }
     },
     {
+      "key": "src/docz/checkBox.mdx",
+      "value": {
+        "name": "CheckBox",
+        "id": "fe53ef71bfa9728732b3d3e020c8a18d",
+        "filepath": "src/docz/checkBox.mdx",
+        "link": "",
+        "slug": "src-docz-check-box",
+        "route": "/src-docz-check-box",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "icon",
+            "depth": 1,
+            "value": "Icon"
+          },
+          {
+            "slug": "使用说明",
+            "depth": 2,
+            "value": "使用说明"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docz/switch.mdx",
+      "value": {
+        "name": "Switch",
+        "id": "ad7eb08aeba203f4e4c54a5b41a5c145",
+        "filepath": "src/docz/switch.mdx",
+        "link": "",
+        "slug": "src-docz-switch",
+        "route": "/src-docz-switch",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "switch",
+            "depth": 1,
+            "value": "Switch"
+          },
+          {
+            "slug": "使用说明",
+            "depth": 2,
+            "value": "使用说明"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 3,
+            "value": "基本使用"
+          },
+          {
+            "slug": "受控模式",
+            "depth": 3,
+            "value": "受控模式"
+          },
+          {
+            "slug": "组件大小",
+            "depth": 3,
+            "value": "组件大小"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/docz/input.mdx",
       "value": {
         "name": "Input",
@@ -247,50 +344,6 @@
             "slug": "inputsearch",
             "depth": 3,
             "value": "Input.Search"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/docz/switch.mdx",
-      "value": {
-        "name": "Switch",
-        "id": "ad7eb08aeba203f4e4c54a5b41a5c145",
-        "filepath": "src/docz/switch.mdx",
-        "link": "",
-        "slug": "src-docz-switch",
-        "route": "/src-docz-switch",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "switch",
-            "depth": 1,
-            "value": "Switch"
-          },
-          {
-            "slug": "使用说明",
-            "depth": 2,
-            "value": "使用说明"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 3,
-            "value": "基本使用"
-          },
-          {
-            "slug": "受控模式",
-            "depth": 3,
-            "value": "受控模式"
-          },
-          {
-            "slug": "组件大小",
-            "depth": 3,
-            "value": "组件大小"
-          },
-          {
-            "slug": "api",
-            "depth": 2,
-            "value": "API"
           }
         ]
       }
