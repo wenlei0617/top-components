@@ -5,8 +5,8 @@ import classnames from "classnames";
 import "./styles/input.scss";
 import Search from "./search";
 import Password from "./password";
-
-interface Iprops {
+import IdCardInput from "./IdCardInput";
+export interface Iprops {
   readonly defaultValue?: string;
   readonly disabled?: boolean;
   readonly id?: string;
@@ -15,13 +15,16 @@ interface Iprops {
   readonly value?: string;
   readonly type?: string;
   readonly style?: React.CSSProperties;
-  readonly onChange?: () => void;
+  readonly onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  [prop: string]: any;
 }
 
 class Input extends React.Component<Iprops> {
-  static Search: typeof Search;
-  static Password: typeof Password;
-  static propTypes = {
+  public static Search: typeof Search;
+  public static Password: typeof Password;
+  public static IdCardInput: typeof IdCardInput;
+
+  public static propTypes = {
     defaultValue: Proptypes.string,
     disabled: Proptypes.bool,
     id: Proptypes.string,
@@ -32,15 +35,15 @@ class Input extends React.Component<Iprops> {
     style: Proptypes.object,
     placeholder: Proptypes.string
   };
-  static defaultProps = {
+  public static defaultProps = {
     defaultValue: "",
     disabled: false,
     size: "default",
     type: "text",
-    placeholder: "",
-    onChange: () => {}
+    placeholder: ""
   };
-  render() {
+
+  public render() {
     const {
       disabled,
       id,

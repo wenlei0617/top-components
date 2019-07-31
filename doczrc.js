@@ -1,6 +1,7 @@
 import { svgSpriteLoader } from "docz-plugin-svg-sprite-loader";
 
 export default {
+  title: "topC",
   codeSandbox: false,
   typescript: true,
   onCreateWebpackChain: config => {
