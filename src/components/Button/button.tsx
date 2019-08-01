@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import * as React from "react";
 import Icon from "../Icon";
 import "./styles/button.scss";
+export type buttonType = "primary" | "danger";
 
 interface Iprops {
   children?: React.ReactNode;
   style?: React.CSSProperties;
   className?: string;
-  type?: "primary" | "danger";
+  type?: buttonType;
   loading?: boolean;
   size?: "small" | "large";
   onClick?: React.MouseEventHandler;
@@ -24,7 +25,7 @@ const Button = (props: Iprops) => {
     [`top-button-${size}`]: !!size
   });
   const defaultText = type || "default";
-  const iconNode = loading ? <Icon name="loading" spin /> : null;
+  const iconNode = loading ? <Icon name="loading" spin={true} /> : null;
   return (
     <button type={htmlType} style={style} onClick={onClick} className={classes} {...rest}>
       {iconNode}

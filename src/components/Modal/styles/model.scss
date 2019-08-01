@@ -1,0 +1,64 @@
+.topC-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+  .topC-modal-warpper {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(#000, 0.6);
+    .topC-modal {
+      position: absolute;
+      top: 200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 520px;
+      border-radius: 5px;
+      background-color: #ffffff;
+      .topC-modal-header {
+        font-size: 16px;
+        color: #000;
+        font-weight: 500;
+        padding: 0px 24px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+          cursor: pointer;
+        }
+      }
+      .topC-modal-body {
+        font-size: 14px;
+        color: #000;
+        padding: 16px 24px;
+        line-height: 1.5;
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+      }
+      .topC-modal-footer {
+        font-size: 16px;
+        color: #000;
+        font-weight: 500;
+        line-height: 22px;
+        padding: 16px 24px;
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        button:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+    .topC-modal-center {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.topC-modal-container-show {
+  z-index: 1000;
+}

@@ -1,0 +1,39 @@
+---
+name: Table
+---
+
+import { Playground, Props } from "docz";
+import Table from "../components/Table";
+
+# Table
+
+## 使用说明
+
+展示行列数据。
+
+### 基本使用
+
+<Playground>
+  <Table
+    columns={[
+      {
+        title: "Name",
+        dataIndex: "name",
+        key: "name",
+        render: text => <div href="javascript:;">{text}</div>
+      },
+      {
+        title: "Age",
+        dataIndex: "age",
+        key: "age"
+      },
+      {
+        title: "Address",
+        dataIndex: "address",
+        key: "address"
+      }
+    ]}
+  />
+</Playground>
+
+## API

@@ -41,7 +41,6 @@ const Switch = (props: Iprops) => {
       });
     }
   }, []);
-  //onclick事件(只有不提供checked得时候才由自己代理state)
   const handleClick: React.MouseEventHandler = e => {
     if (onClick) {
       onClick(!!checked, e);

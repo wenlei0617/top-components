@@ -1,6 +1,6 @@
 {
   "config": {
-    "title": "Top Components",
+    "title": "topC",
     "description": "topCoding 个人组件库",
     "menu": [],
     "version": "1.0.0",
@@ -16,32 +16,84 @@
   },
   "props": [
     {
-      "key": "src\\components\\Button\\button.tsx",
+      "key": "src\\components\\Input\\IdCardInput.tsx",
       "value": [
         {
           "description": "",
-          "displayName": "button",
+          "displayName": "IdCardInput",
           "methods": [],
           "props": {
-            "style": {
+            "placeholder": {
               "defaultValue": null,
               "description": "",
-              "name": "style",
+              "name": "placeholder",
               "parent": {
-                "fileName": "src/components/Button/button.tsx",
+                "fileName": "src/components/Input/IdCardInput.tsx",
+                "name": "Iprops"
+              },
+              "required": true,
+              "type": {
+                "name": "string"
+              }
+            },
+            "defaultValue": {
+              "defaultValue": null,
+              "description": "",
+              "name": "defaultValue",
+              "parent": {
+                "fileName": "D:/myhome/top-components/src/components/Input/input.tsx",
                 "name": "Iprops"
               },
               "required": false,
               "type": {
-                "name": "CSSProperties | undefined"
+                "name": "string | undefined"
               }
             },
-            "className": {
+            "disabled": {
               "defaultValue": null,
               "description": "",
-              "name": "className",
+              "name": "disabled",
               "parent": {
-                "fileName": "src/components/Button/button.tsx",
+                "fileName": "D:/myhome/top-components/src/components/Input/input.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "boolean | undefined"
+              }
+            },
+            "id": {
+              "defaultValue": null,
+              "description": "",
+              "name": "id",
+              "parent": {
+                "fileName": "D:/myhome/top-components/src/components/Input/input.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "string | undefined"
+              }
+            },
+            "size": {
+              "defaultValue": null,
+              "description": "",
+              "name": "size",
+              "parent": {
+                "fileName": "D:/myhome/top-components/src/components/Input/input.tsx",
+                "name": "Iprops"
+              },
+              "required": false,
+              "type": {
+                "name": "\"small\" | \"large\" | \"default\" | undefined"
+              }
+            },
+            "value": {
+              "defaultValue": null,
+              "description": "",
+              "name": "value",
+              "parent": {
+                "fileName": "D:/myhome/top-components/src/components/Input/input.tsx",
                 "name": "Iprops"
               },
               "required": false,
@@ -54,68 +106,38 @@
               "description": "",
               "name": "type",
               "parent": {
-                "fileName": "src/components/Button/button.tsx",
+                "fileName": "D:/myhome/top-components/src/components/Input/input.tsx",
                 "name": "Iprops"
               },
               "required": false,
               "type": {
-                "name": "\"primary\" | \"danger\" | undefined"
+                "name": "string | undefined"
               }
             },
-            "loading": {
-              "defaultValue": {
-                "value": "false"
-              },
-              "description": "",
-              "name": "loading",
-              "parent": {
-                "fileName": "src/components/Button/button.tsx",
-                "name": "Iprops"
-              },
-              "required": false,
-              "type": {
-                "name": "boolean | undefined"
-              }
-            },
-            "size": {
+            "style": {
               "defaultValue": null,
               "description": "",
-              "name": "size",
+              "name": "style",
               "parent": {
-                "fileName": "src/components/Button/button.tsx",
+                "fileName": "D:/myhome/top-components/src/components/Input/input.tsx",
                 "name": "Iprops"
               },
               "required": false,
               "type": {
-                "name": "\"small\" | \"large\" | undefined"
+                "name": "CSSProperties | undefined"
               }
             },
-            "onClick": {
+            "onChange": {
               "defaultValue": null,
               "description": "",
-              "name": "onClick",
+              "name": "onChange",
               "parent": {
-                "fileName": "src/components/Button/button.tsx",
+                "fileName": "D:/myhome/top-components/src/components/Input/input.tsx",
                 "name": "Iprops"
               },
               "required": false,
               "type": {
-                "name": "((event: MouseEvent<Element, MouseEvent>) => void) | undefined"
-              }
-            },
-            "htmlType": {
-              "defaultValue": {
-                "value": "button"
-              },
-              "description": "",
-              "name": "htmlType",
-              "parent": {
-                "fileName": "src/components/Button/button.tsx",
-                "name": "Iprops"
-              },
-              "required": false,
-              "type": {
-                "name": "\"button\" | \"submit\" | \"reset\" | undefined"
+                "name": "((event: ChangeEvent<HTMLInputElement>) => void) | undefined"
               }
             }
           }
@@ -124,30 +146,6 @@
     }
   ],
   "entries": [
-    {
-      "key": "src/docz/animation.mdx",
-      "value": {
-        "name": "Animation",
-        "id": "ddc1be465cd5a7825681777b6878a636",
-        "filepath": "src/docz/animation.mdx",
-        "link": "",
-        "slug": "src-docz-animation",
-        "route": "/src-docz-animation",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "进度条",
-            "depth": 3,
-            "value": "进度条"
-          },
-          {
-            "slug": "api",
-            "depth": 2,
-            "value": "API"
-          }
-        ]
-      }
-    },
     {
       "key": "src/docz/button.mdx",
       "value": {
@@ -193,6 +191,59 @@
       }
     },
     {
+      "key": "src/docz/animation.mdx",
+      "value": {
+        "name": "Animation",
+        "id": "ddc1be465cd5a7825681777b6878a636",
+        "filepath": "src/docz/animation.mdx",
+        "link": "",
+        "slug": "src-docz-animation",
+        "route": "/src-docz-animation",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "进度条",
+            "depth": 3,
+            "value": "进度条"
+          },
+          {
+            "slug": "进度条-api",
+            "depth": 3,
+            "value": "进度条 api"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docz/checkBox.mdx",
+      "value": {
+        "name": "CheckBox",
+        "id": "fe53ef71bfa9728732b3d3e020c8a18d",
+        "filepath": "src/docz/checkBox.mdx",
+        "link": "",
+        "slug": "src-docz-check-box",
+        "route": "/src-docz-check-box",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "icon",
+            "depth": 1,
+            "value": "Icon"
+          },
+          {
+            "slug": "使用说明",
+            "depth": 2,
+            "value": "使用说明"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/docz/icon.mdx",
       "value": {
         "name": "Icon",
@@ -222,25 +273,133 @@
       }
     },
     {
-      "key": "src/docz/checkBox.mdx",
+      "key": "src/docz/input.mdx",
       "value": {
-        "name": "CheckBox",
-        "id": "fe53ef71bfa9728732b3d3e020c8a18d",
-        "filepath": "src/docz/checkBox.mdx",
+        "name": "Input",
+        "id": "e3ff0c2151afb65c25287960192bcb42",
+        "filepath": "src/docz/input.mdx",
         "link": "",
-        "slug": "src-docz-check-box",
-        "route": "/src-docz-check-box",
+        "slug": "src-docz-input",
+        "route": "/src-docz-input",
         "menu": "",
         "headings": [
           {
-            "slug": "icon",
+            "slug": "input",
             "depth": 1,
-            "value": "Icon"
+            "value": "Input"
+          },
+          {
+            "slug": "基本用法",
+            "depth": 2,
+            "value": "基本用法"
+          },
+          {
+            "slug": "调整大小",
+            "depth": 2,
+            "value": "调整大小"
+          },
+          {
+            "slug": "搜索框",
+            "depth": 2,
+            "value": "搜索框"
+          },
+          {
+            "slug": "密码框",
+            "depth": 2,
+            "value": "密码框"
+          },
+          {
+            "slug": "身份证输入框",
+            "depth": 2,
+            "value": "身份证输入框"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          },
+          {
+            "slug": "input-1",
+            "depth": 3,
+            "value": "Input"
+          },
+          {
+            "slug": "inputsearch",
+            "depth": 3,
+            "value": "Input.Search"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docz/modal.mdx",
+      "value": {
+        "name": "Modal",
+        "id": "d586ad9a1a4f4f99a4ec3269df8289cf",
+        "filepath": "src/docz/modal.mdx",
+        "link": "",
+        "slug": "src-docz-modal",
+        "route": "/src-docz-modal",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "modal",
+            "depth": 1,
+            "value": "Modal"
+          },
+          {
+            "slug": "代码演示",
+            "depth": 2,
+            "value": "代码演示"
+          },
+          {
+            "slug": "基础使用",
+            "depth": 3,
+            "value": "基础使用"
+          },
+          {
+            "slug": "自定义-footer",
+            "depth": 3,
+            "value": "自定义 footer"
+          },
+          {
+            "slug": "异步处理",
+            "depth": 3,
+            "value": "异步处理"
+          },
+          {
+            "slug": "api",
+            "depth": 2,
+            "value": "API"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/docz/select.mdx",
+      "value": {
+        "name": "Select",
+        "id": "4c4c306464f9b567e3ff75251ba93b88",
+        "filepath": "src/docz/select.mdx",
+        "link": "",
+        "slug": "src-docz-select",
+        "route": "/src-docz-select",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "select-选择器",
+            "depth": 1,
+            "value": "Select 选择器"
           },
           {
             "slug": "使用说明",
             "depth": 2,
             "value": "使用说明"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 3,
+            "value": "基本使用"
           },
           {
             "slug": "api",
@@ -295,55 +454,35 @@
       }
     },
     {
-      "key": "src/docz/input.mdx",
+      "key": "src/docz/table.mdx",
       "value": {
-        "name": "Input",
-        "id": "e3ff0c2151afb65c25287960192bcb42",
-        "filepath": "src/docz/input.mdx",
+        "name": "Table",
+        "id": "4801c0115af642990b08412b888037fb",
+        "filepath": "src/docz/table.mdx",
         "link": "",
-        "slug": "src-docz-input",
-        "route": "/src-docz-input",
+        "slug": "src-docz-table",
+        "route": "/src-docz-table",
         "menu": "",
         "headings": [
           {
-            "slug": "input",
+            "slug": "table",
             "depth": 1,
-            "value": "Input"
+            "value": "Table"
           },
           {
-            "slug": "基本用法",
+            "slug": "使用说明",
             "depth": 2,
-            "value": "基本用法"
+            "value": "使用说明"
           },
           {
-            "slug": "调整大小",
-            "depth": 2,
-            "value": "调整大小"
-          },
-          {
-            "slug": "搜索框",
-            "depth": 2,
-            "value": "搜索框"
-          },
-          {
-            "slug": "密码框",
-            "depth": 2,
-            "value": "密码框"
+            "slug": "基本使用",
+            "depth": 3,
+            "value": "基本使用"
           },
           {
             "slug": "api",
             "depth": 2,
             "value": "API"
-          },
-          {
-            "slug": "input-1",
-            "depth": 3,
-            "value": "Input"
-          },
-          {
-            "slug": "inputsearch",
-            "depth": 3,
-            "value": "Input.Search"
           }
         ]
       }

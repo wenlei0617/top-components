@@ -4,8 +4,8 @@
   "description": "topCoding 个人组件库",
   "main": "index.js",
   "scripts": {
-    "docz:dev": "docz dev",
-    "docz:build": "docz build"
+    "dev": "docz dev",
+    "build": "docz build"
   },
   "keywords": [],
   "author": "",
