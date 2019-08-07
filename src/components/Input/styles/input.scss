@@ -1,0 +1,30 @@
+.topC-input {
+  width: 200px;
+  height: 32px;
+  padding: 4px 11px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.topC-input-small {
+  height: 24px;
+  line-height: 100%;
+  padding: 1px 7px;
+}
+.topC-input-large {
+  font-size: 16px;
+  height: 40px;
+  line-height: 100%;
+  padding: 6px 11px;
+}
+.topC-input:focus {
+  border-color: #ff8824;
+  box-shadow: 0 0 0 2px rgba(#ff8824, 0.2);
+}
+.topC-input:hover {
+  border-color: #ff8824;
+}

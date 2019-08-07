@@ -1,0 +1,49 @@
+.topC-switch {
+  width: 44px;
+  height: 22px;
+  background-color: rgba(0, 0, 0, 0.25);
+  outline: none;
+  border: 0;
+  padding: 0;
+  border-radius: 100px;
+  position: relative;
+  line-height: 22px;
+
+  &-inner {
+    display: block;
+    margin-left: 24px;
+    margin-right: 6px;
+    transition: all 0.2s;
+    color: #fff;
+  }
+
+  &::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    display: block;
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    left: 1px;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+  }
+
+  &-checked {
+    background-color: #ff8824;
+
+    &::before {
+      left: 100%;
+      top: 50%;
+      margin-left: -1px;
+      transform: translate(-100%, -50%);
+    }
+
+    .topC-switch-inner {
+      margin-right: 24px;
+      margin-left: 6px;
+    }
+  }
+}

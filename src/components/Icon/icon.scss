@@ -1,0 +1,21 @@
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.topC-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.2em;
+  fill: currentColor;
+  overflow: hidden;
+  line-height: auto;
+}
+.topC-icon[data-spin='true'] {
+  animation: rotation linear 2s;
+  animation-iteration-count: infinite;
+}
