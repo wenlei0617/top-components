@@ -39,12 +39,12 @@ const Thead = (props: Iprops) => {
               {item.ordered && (
                 <span className='topC-table-column-sorter'>
                   <Icon
-                    name='sort_up'
+                    type='md-arrow-dropup'
                     fill='yellow'
                     onClick={() => handleClick(SORT_ORDER.ASCEND, item)}
                   />
                   <Icon
-                    name='sort_down'
+                    type='md-arrow-dropdown'
                     onClick={() => handleClick(SORT_ORDER.DESCEND, item)}
                   />
                 </span>

@@ -1,0 +1,34 @@
+.topC-input-affix-wrapper {
+  position: relative;
+
+  input {
+    box-sizing: border-box;
+  }
+
+  span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  span:first-child {
+    position: absolute;
+    left: 12px;
+  }
+
+  span:last-child {
+    position: absolute;
+    right: 12px;
+  }
+}
+
+.topC-input-affix-prefix {
+  input {
+    padding-left: 30px;
+  }
+}
+
+.topC-input-affix-suffix {
+  input {
+    padding-right: 30px;
+  }
+}

@@ -1,20 +1,20 @@
-import * as React from "react";
-import Input, { Iprops as InputProps } from "./input";
+import * as React from 'react';
+import Input, { InputProps } from './input';
 
 interface Iprops extends InputProps {
   placeholder: string;
 }
 const IdCardInput: React.FC<Iprops> = (props: Iprops) => {
-  const { placeholder = "请输入身份证号码", value, onChange } = props;
-  const [IdCard, setIdCard] = React.useState("");
+  const { placeholder = '请输入身份证号码', value, onChange } = props;
+  const [IdCard, setIdCard] = React.useState('');
   React.useEffect(() => {
-    setIdCard(value || "");
+    setIdCard(value || '');
   }, []);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const filterValue: string = event.target.value.replace(/[^\d\x\X]/g, "");
+    const filterValue: string = event.target.value.replace(/[^\d\x\X]/g, '');
     if (value !== filterValue) {
       setIdCard(filterValue);
-      if (typeof onChange === "function") {
+      if (typeof onChange === 'function') {
         onChange(event);
       }
     }

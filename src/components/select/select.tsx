@@ -75,7 +75,7 @@ const Select = (props: Iprops) => {
               value={value}
             />
           </span>
-          <Icon name={ishidden ? 'down' : 'up'} />
+          <Icon type={ishidden ? 'down' : 'up'} />
         </div>
         <div
           ref={selectScroll}

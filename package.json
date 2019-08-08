@@ -4,13 +4,12 @@
     "description": "个人组件库",
     "main": "index.js",
     "scripts": {
-        "storybook": "start-storybook -p 9001 -c .storybook",
-        "build": "cross-env NODE_ENV=development  webpack --colors --progress --config build/webpack.prod.js",
-        "dev": "cross-env NODE_ENV=development  webpack-dev-server --progress --config build/webpack.dev.js"
+        "dev": "start-storybook -p 9001 -c .storybook"
     },
     "author": "topCoding",
     "license": "ISC",
     "dependencies": {
+        "@storybook/addon-options": "^5.1.10",
         "@storybook/react": "^5.1.10",
         "@svgr/webpack": "^4.3.2",
         "@types/react": "^16.8.17",

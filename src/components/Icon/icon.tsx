@@ -1,29 +1,38 @@
 import * as React from 'react';
 import * as Proptypes from 'prop-types';
+import Archer from 'archer-svgs';
 import './icon.scss';
 
 interface Iprops {
-  readonly name: string;
+  readonly type: string;
   readonly fill?: string;
   readonly spin?: boolean;
   readonly style?: React.CSSProperties;
   [props: string]: any;
 }
 
-const loadSvg = (name: string) => {
-  const info = require(`./svg/${name}.svg`);
-  return info;
+const archer = new Archer();
+const svgSourece = 'https://unpkg.com/ionicons@4.4.2/dist/ionicons/svg/';
+
+const getSvg = async (type: string) => {
+  return await archer.fetchSvg(`${svgSourece}${type}.svg`);
 };
 
 const Icon = (props: Iprops) => {
-  const { name, fill, spin, ...rest } = props;
-  const IconInfo = loadSvg(name);
+  const { type, fill, style, component, spin, ...rest } = props;
+  const [svgHtml, changeSvgHtml] = React.useState('');
+  React.useEffect(() => {
+    getSvg(type).then(response => {
+      changeSvgHtml(response);
+    });
+  }, [type]);
   return (
-    <i {...rest} className='topC-icon'>
-      <svg>
-        <use xlinkHref={IconInfo} fill={fill} data-spin={spin} />
-      </svg>
-    </i>
+    <i
+      className='topC-icon'
+      style={style}
+      dangerouslySetInnerHTML={{ __html: component || svgHtml }}
+      {...rest}
+    />
   );
 };
 

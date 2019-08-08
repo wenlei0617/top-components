@@ -1,19 +1,25 @@
-import * as React from "react";
-import Input from "./input";
-import Icon from "../Icon";
-import "./styles/password.scss";
-const PassWord = () => {
-  const [IconName, setIcon] = React.useState("view_off");
+import * as React from 'react';
+import AffixInput, { AffixInputProps } from './affixInput';
+import Icon from '../Icon';
+const PassWord = (props: AffixInputProps) => {
+  const [IconName, setIcon] = React.useState('ios-eye-off');
   const handleMouseOver = () => {
-    setIcon(IconName === "view" ? "view_off" : "view");
+    setIcon(IconName === 'ios-eye' ? 'ios-eye-off' : 'ios-eye');
   };
+
   return (
-    <span className="topC-password">
-      <Input type={IconName === "view" ? "text" : "password"} />
-      <span onClick={handleMouseOver}>
-        <Icon name={IconName} />
-      </span>
-    </span>
+    <AffixInput
+      placeholder='请输入密码'
+      type={IconName === 'ios-eye' ? 'text' : 'password'}
+      suffix={
+        <Icon
+          style={{ cursor: 'pointer' }}
+          type={IconName}
+          onClick={handleMouseOver}
+        />
+      }
+      {...props}
+    />
   );
 };
 export default PassWord;

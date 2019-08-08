@@ -33,7 +33,7 @@ const Button = (props: Iprops) => {
     [`top-button-loading`]: loading,
     [`top-button-${size}`]: !!size,
   });
-  const iconNode = loading ? <Icon name='loading' spin={true} /> : null;
+  const iconNode = loading ? <Icon type='loading' spin={true} /> : null;
   return (
     <button
       type={htmlType}
@@ -43,7 +43,7 @@ const Button = (props: Iprops) => {
       {...rest}
     >
       {iconNode}
-      <span>{children}</span>
+      {children}
     </button>
   );
 };

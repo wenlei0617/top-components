@@ -2,19 +2,22 @@
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
 .topC-icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.2em;
-  fill: currentColor;
-  overflow: hidden;
-  line-height: auto;
+  font-size: 14px;
+  svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    vertical-align: -0.15em;
+  }
 }
+
 .topC-icon[data-spin='true'] {
   animation: rotation linear 2s;
   animation-iteration-count: infinite;

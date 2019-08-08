@@ -1,5 +1,6 @@
 .topC-input {
-  width: 200px;
+  width: 220px;
+  display: inline-block;
   height: 32px;
   padding: 4px 11px;
   outline: none;
@@ -10,21 +11,34 @@
   font-size: 14px;
   transition: all 0.3s;
 }
+
 .topC-input-small {
   height: 24px;
   line-height: 100%;
   padding: 1px 7px;
 }
+
 .topC-input-large {
   font-size: 16px;
   height: 40px;
   line-height: 100%;
   padding: 6px 11px;
 }
+
 .topC-input:focus {
   border-color: #ff8824;
   box-shadow: 0 0 0 2px rgba(#ff8824, 0.2);
 }
+
 .topC-input:hover {
   border-color: #ff8824;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }

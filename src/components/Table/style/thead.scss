@@ -1,8 +1,8 @@
 .topC-tabel-head {
   max-width: 100%;
   width: 100%;
+  color: #000;
 
-  color: #000000;
   tr {
     th {
       margin: 0;
@@ -15,19 +15,18 @@
       box-sizing: border-box;
       font-size: 14px;
       font-weight: 600;
+
       & > div {
         width: 100%;
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
         .topC-table-column-sorter {
           margin-left: 10px;
+
           i {
-            font-size: 12px;
-            line-height: 0;
             display: block;
-            cursor: pointer;
-            color: yellow;
           }
         }
       }
