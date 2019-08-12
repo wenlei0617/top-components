@@ -6,7 +6,6 @@ const PassWord = (props: AffixInputProps) => {
   const handleMouseOver = () => {
     setIcon(IconName === 'ios-eye' ? 'ios-eye-off' : 'ios-eye');
   };
-
   return (
     <AffixInput
       placeholder='请输入密码'

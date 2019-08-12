@@ -15,7 +15,7 @@ storiesOf('Components/Radio', module).add(
         <h3>基本使用</h3>
         <Radio value='Radio'>Radio</Radio>
         <h3>单选框</h3>
-        <Group value='A' onChange={handleChange}>
+        <Group defaultValue={'B'} name='testRadio'>
           <Radio value='A'>A</Radio>
           <Radio value='B'>B</Radio>
           <Radio value='C'>C</Radio>

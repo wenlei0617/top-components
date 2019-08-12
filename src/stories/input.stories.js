@@ -1,16 +1,20 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import Input from '../components/Input';
-import Icon from '../components/Icon';
+import Input, {
+  AffixInput,
+  IdCardInput,
+  Password,
+  Search,
+  NumberInput,
+} from '../components/Input';
 
-const { AffixInput, NumberInput } = Input;
+import Icon from '../components/Icon';
 storiesOf('Components/Input', module).add(
   'all Input',
   withInfo(`
       通过鼠标或键盘输入内容，是最基础的表单域的包装。
     `)(() => {
-    const { Search } = Input;
     return (
       <div>
         <h3>基本使用</h3>
@@ -22,9 +26,9 @@ storiesOf('Components/Input', module).add(
           placeholder='input search text'
         />
         <h3>身份证</h3>
-        <Input.IdCardInput />
+        <IdCardInput />
         <h3>密码输入框</h3>
-        <Input.Password />
+        <Password />
         <h3>搜索框</h3>
         <Search enterButton />
         <p>自定义图标</p>

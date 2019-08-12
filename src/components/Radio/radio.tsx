@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import './styles/raido.scss';
 
 interface RadioProps {
+  readonly defaultChecked?: boolean;
   readonly children?: React.ReactNode;
   readonly checked?: boolean;
   readonly value?: any;
@@ -10,12 +11,12 @@ interface RadioProps {
 }
 
 const Radio = (props: RadioProps) => {
-  const { children, checked, value, onChange } = props;
-
+  const { children, checked, value, onChange, defaultChecked, ...rest } = props;
   const wrapperClass = classnames('topC-radio-wrapper', {
     'topC-radio-wrapper-checked': checked,
   });
-
+  const newProps =
+    checked === undefined ? { defaultChecked } : { checked, onChange };
   return (
     <label className={wrapperClass}>
       <span className='topC-radio'>
@@ -23,9 +24,9 @@ const Radio = (props: RadioProps) => {
           value={value}
           type='radio'
           className='topC-radio-input'
-          checked={checked}
           readOnly
-          onChange={onChange}
+          {...newProps}
+          {...rest}
         />
         <span className='topC-radio-inner' />
       </span>
@@ -36,5 +37,6 @@ const Radio = (props: RadioProps) => {
 
 Radio.defaultProps = {
   checked: false,
+  defaultChecked: false,
 };
 export default Radio;

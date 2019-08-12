@@ -2,17 +2,38 @@ import * as React from 'react';
 import radio from './radio';
 import './styles/group.scss';
 interface GroupProps {
+  readonly defaultValue?: any;
+  readonly name?: string;
   readonly children: React.ReactNode;
   readonly value?: any;
-  readonly onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  readonly onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 const Group: React.SFC<GroupProps> = (props: GroupProps) => {
-  const { children, value, onChange } = props;
-  const handleChange = (Event: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChange) {
-      onChange(Event);
+  const { children, value, onChange, defaultValue, name } = props;
+  const [state, useState] = React.useState(() => {
+    return {
+      value: value || defaultValue,
+    };
+  });
+  React.useEffect(() => {
+    if (value in props && value !== state.value) {
+      useState({
+        value,
+      });
     }
+  }, [value]);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    useState({
+      value: event.target.value,
+    });
+    onChange && onChange(event);
   };
+  const newProps =
+    name === undefined
+      ? {}
+      : {
+          name,
+        };
   return (
     <div className='topC-radio-group'>
       {React.Children.map(children, (thisArg: radio) => {
@@ -20,7 +41,8 @@ const Group: React.SFC<GroupProps> = (props: GroupProps) => {
           ...thisArg,
           props: {
             ...thisArg.props,
-            checked: value === thisArg.props.value,
+            ...newProps,
+            checked: state.value === thisArg.props.value,
             onChange: handleChange,
           },
         });

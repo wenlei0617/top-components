@@ -1,14 +1,7 @@
 import Input from './input';
-import Search from './search';
-import password from './password';
-import IdCardInput from './IdCardInput';
-import AffixInput from './affixInput';
-import NumberInput from './NumberInput';
-
-Input.Search = Search;
-Input.Password = password;
-Input.IdCardInput = IdCardInput;
-Input.AffixInput = AffixInput;
-Input.NumberInput = NumberInput;
-
+export { default as Search } from './search';
+export { default as Password } from './password';
+export { default as IdCardInput } from './IdCardInput';
+export { default as AffixInput } from './affixInput';
+export { default as NumberInput } from './NumberInput';
 export default Input;

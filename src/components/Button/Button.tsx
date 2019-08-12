@@ -10,8 +10,7 @@ interface Iprops {
   type?: 'primary' | 'danger';
   loading?: boolean;
   size?: 'small' | 'large';
-  onClick?: React.MouseEventHandler;
-
+  onClick?: (event: React.MouseEvent<Element, MouseEvent>) => void;
   htmlType?: 'button' | 'submit' | 'reset';
 }
 const Button = (props: Iprops) => {
