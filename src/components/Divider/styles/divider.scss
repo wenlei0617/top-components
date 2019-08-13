@@ -16,11 +16,22 @@
 
 .topC-divider-with-text {
   width: 100%;
+  display: table;
   background: none;
   height: auto;
   margin: 16px 0;
 
   &::before {
+    content: '';
+    width: 50%;
+    position: relative;
+    top: 50%;
+    border-top: 1px solid #e8e8e8;
+    transform: translateY(50%);
+    display: table-cell;
+  }
+
+  &::after {
     content: '';
     width: 50%;
     position: relative;
