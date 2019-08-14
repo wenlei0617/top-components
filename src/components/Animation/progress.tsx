@@ -1,7 +1,7 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import * as classnames from "classnames";
-import "./styles/progress.scss";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import * as classnames from 'classnames';
+import './styles/progress.scss';
 interface Iprops {
   readonly children?: React.ReactNode;
   readonly strokeWidth: number;
@@ -28,9 +28,11 @@ const Progress = (props: Iprops) => {
     ...rest
   } = props;
   React.useEffect(() => {
-    const ele: SVGCircleElement | null = document.querySelector(".topC-progress-cover");
+    const ele: SVGCircleElement | null = document.querySelector(
+      '.topC-progress-cover'
+    );
     if (ele) {
-      ele.setAttribute("transform-origin", `${width / 2}px  ${height / 2}px`);
+      ele.setAttribute('transform-origin', `${width / 2}px  ${height / 2}px`);
     }
     circleLength = Math.floor(2 * Math.PI * (width / 2));
   }, []);
@@ -40,49 +42,56 @@ const Progress = (props: Iprops) => {
   const rotateCircle = (val: number): void => {
     let receiveRate = Math.max(0, val);
     receiveRate = Math.min(100, val);
-    const ele: SVGCircleElement | null = document.querySelector(".topC-progress-cover");
+    const ele: SVGCircleElement | null = document.querySelector(
+      '.topC-progress-cover'
+    );
     if (ele) {
-      ele.setAttribute("stroke-dasharray", "" + (receiveRate * circleLength) / 100 + ",10000");
+      ele.setAttribute(
+        'stroke-dasharray',
+        '' + (receiveRate * circleLength) / 100 + ',10000'
+      );
     }
   };
   const reciveStyle = {
     width,
     height,
-    ...style
+    ...style,
   };
   return (
     <div
       className={classnames({
-        "topC-progress": true,
-        [className]: !!className
+        'topC-progress': true,
+        [className]: !!className,
       })}
       style={reciveStyle}
-      {...rest}>
+      {...rest}
+    >
       <svg
-        xmlns="http://www.w3.org/200/svg"
+        xmlns='http://www.w3.org/200/svg'
         height={height}
         width={width}
-        className="top-progress-svg">
+        className='top-progress-svg'
+      >
         <circle
           cy={height / 2}
           cx={width / 2}
           r={width / 2 - 5}
-          fill="transparent"
+          fill='transparent'
           stroke={backColor}
           strokeWidth={strokeWidth}
         />
         <circle
-          className="topC-progress-cover"
+          className='topC-progress-cover'
           cy={height / 2}
           cx={width / 2}
           r={width / 2 - 5}
-          fill="transparent"
+          fill='transparent'
           stroke={color}
           strokeWidth={strokeWidth}
-          strokeDasharray="0,10000"
+          strokeDasharray='0,10000'
         />
       </svg>
-      <div className="top-progress-child">{children}</div>
+      <div className='top-progress-child'>{children}</div>
     </div>
   );
 };
@@ -93,14 +102,14 @@ Progress.propTypes = {
   width: PropTypes.number,
   backColor: PropTypes.string,
   color: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
 };
 Progress.defaultProps = {
   height: 120,
   strokeWidth: 2,
   width: 120,
   rate: 20,
-  backColor: "grey",
-  color: "red"
+  backColor: 'grey',
+  color: 'red',
 };
 export default Progress;
